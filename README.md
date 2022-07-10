@@ -46,6 +46,10 @@ declare const names: readonly ["aliceblue", "antiquewhite", "aqua", "aquamarine"
 export default names;
 ```
 
+## Related
+
+- [`named-colors-hex`](https://jaywcjlove.github.io/named-colors-hex) A array with color name -> Hex rgb.
+
 ## Contributors
 
 As always, thanks to our amazing contributors!
