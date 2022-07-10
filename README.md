@@ -56,6 +56,15 @@ const named = [                const hexs = [
 ];                             ];
 ```
 
+```js
+import hexs from "colors-named-hex";
+import named from "colors-named";
+
+hexs[named.indexOf('aliceblue')] // => #F0F8FF
+hexs[named.indexOf('red')]       // => #FF0000
+hexs[named.indexOf('black')]     // => #000000
+```
+
 ## API
 
 ```ts
@@ -69,6 +78,7 @@ export default names;
 ## Related
 
 - [`colors-named-hex`](https://jaywcjlove.github.io/colors-named-hex) A array with color name -> Hex rgb.
+- [`colors-named-decimal`](https://github.com/jaywcjlove/colors-named-decimal) A array with color name -> decimal rgb.
 
 ## Contributors
 
