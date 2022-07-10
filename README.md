@@ -37,28 +37,33 @@ console.log(named.length)            // => 148
 ```
 
 ```js
-'colors-named'                'colors-named-hex'
-===============              =====================
-const named = [                const hexs = [
-  'aliceblue',         ->        '#F0F8FF',
-  'antiquewhite',      ->        '#FAEBD7',
-  'aqua',              ->        '#00FFFF',
-  'aquamarine',        ->        '#7FFFD4',
-  'azure',             ->        '#F0FFFF',
-  'beige',             ->        '#F5F5DC',
-  'bisque',            ->        '#FFE4C4',
-  'black',             ->        '#000000',
-  'blanchedalmond',    ->        '#FFEBCD',
-  'blue',              ->        '#0000FF',
-  'blueviolet',        ->        '#8A2BE2',
-  'brown',             ->        '#A52A2A',
-  ...                  ->        ...
-];                             ];
+'colors-named'                'colors-named-hex'          'colors-named-decimal'
+===============              ===================         =====================
+const named = [                const hexs = [             const hexs = [
+  'aliceblue',         ->        '#F0F8FF',       ->        [240, 248, 255],
+  'antiquewhite',      ->        '#FAEBD7',       ->        [250, 235, 215],
+  'aqua',              ->        '#00FFFF',       ->        [0, 255, 255],
+  'aquamarine',        ->        '#7FFFD4',       ->        [127, 255, 212],
+  'azure',             ->        '#F0FFFF',       ->        [240, 255, 255],
+  'beige',             ->        '#F5F5DC',       ->        [245, 245, 220],
+  'bisque',            ->        '#FFE4C4',       ->        [255, 228, 196],
+  'black',             ->        '#000000',       ->        [0, 0, 0],
+  'blanchedalmond',    ->        '#FFEBCD',       ->        [255, 235, 205],
+  'blue',              ->        '#0000FF',       ->        [0, 0, 255],
+  'blueviolet',        ->        '#8A2BE2',       ->        [138, 43, 226],
+  'brown',             ->        '#A52A2A',       ->        [165, 42, 42],
+  ...                  ->        ...              ->        ...
+];                             ];                         ];
 ```
 
 ```js
 import hexs from "colors-named-hex";
 import named from "colors-named";
+import decimal from "colors-named-decimal";
+
+decimal[named.indexOf('aliceblue')] // => [240, 248, 255]
+decimal[named.indexOf('red')]       // => [255, 0, 0]
+decimal[named.indexOf('black')]     // => [0, 0, 0]
 
 hexs[named.indexOf('aliceblue')] // => #F0F8FF
 hexs[named.indexOf('red')]       // => #FF0000
