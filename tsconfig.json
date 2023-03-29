@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "declaration": true,
+    "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitThis": true,
     "strictBindCallApply": true,
@@ -15,5 +16,7 @@
     "noImplicitAny": true,
     "outDir": "lib",
     "baseUrl": "."
-  }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
