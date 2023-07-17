@@ -19,12 +19,24 @@ jobs:
       - run: npm run type-check
       - run: npm run coverage
 
-      - name: Converts Markdown to HTML
-        uses: jaywcjlove/markdown-to-html-cli@main
-        with:
-          output: coverage/index.html
-          github-corners: https://github.com/jaywcjlove/colors-named
-          favicon: data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>
+      - name: Compress uiw Example.
+        run: |
+          cat > idoc.yml << EOF
+          site: "Colors Named {{version}}"
+          menus:
+            Home: index.html
+            Hex: https://jaywcjlove.github.io/colors-named-hex/
+            Decimal: https://jaywcjlove.github.io/colors-named-decimal/
+          EOF
+
+      - run: npm install idoc@1.26.6 -g
+      - run: idoc
+      # - name: Converts Markdown to HTML
+      #   uses: jaywcjlove/markdown-to-html-cli@main
+      #   with:
+      #     output: coverage/index.html
+      #     github-corners: https://github.com/jaywcjlove/colors-named
+      #     favicon: data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>
 
       - name: Create Coverage Badges
         uses: jaywcjlove/coverage-badges-cli@main
