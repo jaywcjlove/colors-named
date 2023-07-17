@@ -19,7 +19,7 @@ jobs:
       - run: npm run type-check
       - run: npm run coverage
 
-      - name: Compress uiw Example.
+      - name: Create idoc config.
         run: |
           cat > idoc.yml << EOF
           site: "Colors Named {{version}}"
