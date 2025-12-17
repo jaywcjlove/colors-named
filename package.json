@@ -5,6 +5,7 @@
   "type": "module",
   "types": "./lib/index.d.ts",
   "exports": "./lib/index.js",
+  "module": "./lib/index.js",
   "homepage": "https://jaywcjlove.github.io/colors-named/",
   "funding": "https://jaywcjlove.github.io/#/sponsor",
   "repository": {
