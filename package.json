@@ -1,6 +1,6 @@
 {
   "name": "colors-named",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A array with color names.",
   "type": "module",
   "types": "./lib/index.d.ts",
